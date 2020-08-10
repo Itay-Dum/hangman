@@ -43,43 +43,43 @@ def show_hidden_word(secret_word, old_letters_guessed, letter_guessed):
 def print_hangman(num_of_tries):
     """keeps a dictionary of all the hangman positions and prints them as num of tries grows"""
     HANGMAN_PHOTOS = {
-        "pic1": '''x-------x''',
-        "pic2": '''
+        "1": '''x-------x''',
+        "2": '''
     x-------x
     |
     |
     |
     |
     |''',
-        "pic3": '''
-    x-------x
-    |       |
-    |       0
-    |
-    |
-    |''',
-        "pic4": '''
+        "3": '''
     x-------x
     |       |
     |       0
+    |
+    |
+    |''',
+        "4": '''
+    x-------x
+    |       |
+    |       0
     |       |
     |
     |''',
-        "pic5": r'''
+        "5": r'''
     x-------x
     |       |
     |       0
     |      /|\
     |
     |''',
-        "pic6": r'''
+        "6": r'''
     x-------x
     |       |
     |       0
     |      /|\
     |      /
     |''',
-        "pic7": r'''
+        "7": r'''
     x-------x
     |       |
     |       0
@@ -89,22 +89,7 @@ def print_hangman(num_of_tries):
 
     }
 
-    if num_of_tries == 1:
-        print(HANGMAN_PHOTOS["pic1"])
-    elif num_of_tries == 2:
-        print(HANGMAN_PHOTOS["pic2"])
-    elif num_of_tries == 3:
-        print(HANGMAN_PHOTOS["pic3"])
-    elif num_of_tries == 4:
-        print(HANGMAN_PHOTOS["pic4"])
-    elif num_of_tries == 5:
-        print(HANGMAN_PHOTOS["pic5"])
-    elif num_of_tries == 6:
-        print(HANGMAN_PHOTOS["pic6"])
-    elif num_of_tries == 7:
-        print(HANGMAN_PHOTOS["pic7"])
-    if num_of_tries > 7:
-        print("impossible")
+    print(HANGMAN_PHOTOS[str(num_of_tries)])
 
 
 def choose_word(file_path, index):
